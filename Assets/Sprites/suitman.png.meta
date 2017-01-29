@@ -1,0 +1,256 @@
+fileFormatVersion: 2
+guid: 42106c23424414adcab0db4a7ee3ba65
+timeCreated: 1485645163
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: suitman_0
+    21300002: suitman_1
+    21300004: suitman_2
+    21300006: suitman_3
+    21300008: suitman_4
+    21300010: suitman_5
+    21300012: suitman_6
+    21300014: suitman_7
+    21300016: suitman_8
+    21300018: suitman_9
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Tizen
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Samsung TV
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: suitman_0
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 976
+        width: 136
+        height: 212
+      alignment: 9
+      pivot: {x: 0.45804328, y: 0.1590674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: suitman_1
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 654
+        width: 73
+        height: 210
+      alignment: 9
+      pivot: {x: 0.8126655, y: 0.87135154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: suitman_2
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 567
+        width: 261
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: suitman_3
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 656
+        width: 78
+        height: 210
+      alignment: 9
+      pivot: {x: 0.25614733, y: 0.8532369}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: suitman_4
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 402
+        width: 48
+        height: 194
+      alignment: 9
+      pivot: {x: 0.42074838, y: 0.9215871}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: suitman_5
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 270
+        width: 89
+        height: 228
+      alignment: 9
+      pivot: {x: 0.47862878, y: 0.89208823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: suitman_6
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 283
+        width: 89
+        height: 229
+      alignment: 9
+      pivot: {x: 0.43588567, y: 0.8405409}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: suitman_7
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 412
+        width: 52
+        height: 196
+      alignment: 9
+      pivot: {x: 0.5365765, y: 0.9075809}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: suitman_8
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 10
+        width: 104
+        height: 256
+      alignment: 9
+      pivot: {x: 0.62802243, y: 0.8640635}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: suitman_9
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 12
+        width: 103
+        height: 257
+      alignment: 9
+      pivot: {x: 0.37073466, y: 0.8848494}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
