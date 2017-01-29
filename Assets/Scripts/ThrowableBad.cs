@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThrowableGood : MonoBehaviour {
+public class ThrowableBad : MonoBehaviour {
 
 	private float startX,endX;
 	private float startY,endY;
 	private float startTime,flightTime,endTime;
 	private float arcHeight;
-	public float confidenceIncrease=10.0f;
+
+	public float confidenceDecrease=10.0f;
 	private float A,B,C;
 
 	public float maxHeight;
@@ -28,11 +29,7 @@ public class ThrowableGood : MonoBehaviour {
 		arcHeight = maxHeight;
 		startY = transform.position.y;
 		startX = transform.position.x;
-
-		endX = Random.Range (-8f, 8f);
-
-
-		//endX = GameObject.Find ("Player/torso/head").transform.position.x;
+		endX = GameObject.Find ("Player/torso/head").transform.position.x;
 		endY = GameObject.Find ("Player/torso/head").transform.position.y;
 		startScale = transform.localScale;
 
@@ -44,7 +41,7 @@ public class ThrowableGood : MonoBehaviour {
 		B = -(y2 - 4f * y1 + 3f * y0);
 		A = (y2 - 2f * y1 + y0) / 0.5f;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		//follow arc -x^2
@@ -79,20 +76,24 @@ public class ThrowableGood : MonoBehaviour {
 		this.transform.localScale = startScale * scale;
 	}
 
+
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		//Debug.Log ("HIT??");
 		//if we hit the player...
 		if (other.gameObject.tag=="hittable"){
-			//	Debug.Log ("HIT@@");
+			//Debug.Log ("HIT@@");
 			gameObject.DestroySelf ();
-			//ConfidenceBar.DecreaseConfidence(confidenceIncrease);
-			GameObject.Find("ConfidenceBar").GetComponent<ConfidenceBar>().IncreaseConfidence(confidenceIncrease);
+
+
+			GameObject.Find("ConfidenceBar").GetComponent<ConfidenceBar>().DecreaseConfidence(confidenceDecrease);
+			//ConfidenceBar.IncreaseConfidence(confidenceDecrease);
 		}
 
 
 
 	}
+
 
 
 

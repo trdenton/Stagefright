@@ -65,7 +65,7 @@ public class Player : MonoBehaviour {
 			angle -= 180;
 		}
 		//angle += 90;
-		Debug.Log ("angle is " + angle);
+//		Debug.Log ("angle is " + angle);
 
 		//Quaternion quat = Quaternion.identity;
 		//quat.eulerAngles = new Vector3(0,0,angle); //Changing angle

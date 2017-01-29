@@ -9,6 +9,7 @@ public class ThrowableGenerator: MonoBehaviour {
 
 
 	public float throwPeriod;
+	public float nextThrow;
 
 	// Use this for initialization
 	void Start () {
@@ -21,11 +22,19 @@ public class ThrowableGenerator: MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.Space)) {
+		if (Input.GetKeyDown (KeyCode.Space)) {
 			GenerateObject ();
 		}
-	}
 
+		if (Time.time >= nextThrow) {
+			GenerateObject ();
+			GetNextThrowTime ();
+		}
+	}
+	void GetNextThrowTime()
+	{
+		nextThrow = Random.Range (0.5f, 1.0f) * throwPeriod + Time.time;
+	}
 
 	void GenerateObject()
 	{
@@ -40,7 +49,7 @@ public class ThrowableGenerator: MonoBehaviour {
 
 		Vector3 point = new Vector3 (xStart,yStart, transform.position.z);
 
-		Debug.Log ("Generating at " + point);
+//		Debug.Log ("Generating at " + point);
 
 		newObject.transform.position = point;
 	}
