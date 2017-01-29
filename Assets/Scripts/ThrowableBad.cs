@@ -81,13 +81,16 @@ public class ThrowableBad : MonoBehaviour {
 	{
 		//Debug.Log ("HIT??");
 		//if we hit the player...
-		if (other.gameObject.tag=="hittable"){
+		if (other.gameObject.tag == "hittable") {
 			//Debug.Log ("HIT@@");
 			gameObject.DestroySelf ();
 
 
-			GameObject.Find("ConfidenceBar").GetComponent<ConfidenceBar>().DecreaseConfidence(confidenceDecrease);
+			GameObject.Find ("ConfidenceBar").GetComponent<ConfidenceBar> ().DecreaseConfidence (confidenceDecrease);
 			//ConfidenceBar.IncreaseConfidence(confidenceDecrease);
+		} else if (other.gameObject.tag == "blockable") {
+			gameObject.DestroySelf ();
+			Debug.Log ("BLOCKED");
 		}
 
 

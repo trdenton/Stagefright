@@ -10,6 +10,8 @@ public class WordScrollManager : Singleton<WordScrollManager> {
     public const float WORD_INTERVAL = 5f;
     public float spawnNewWordTimer = 0f;
 
+	public float confidenceIncrease=10f,confidenceDecrease=10f;
+
     private float RIGHT_POS = 100f;
     private float LEFT_POS = 0f;
 
@@ -75,6 +77,8 @@ public class WordScrollManager : Singleton<WordScrollManager> {
                 if (focusedLetterIndex > focusedWord.text.Length -1)
                 {
                     focusedWord.color = Color.green; //succeeded
+					GameObject.Find("ConfidenceBar").GetComponent<ConfidenceBar>().IncreaseConfidence(confidenceIncrease);
+
                 }
             }
         }
@@ -116,6 +120,7 @@ public class WordScrollManager : Singleton<WordScrollManager> {
             if (focusedLetterIndex < focusedWord.text.Length)
             {
                 focusedWord.color = Color.red; //failed
+				GameObject.Find("ConfidenceBar").GetComponent<ConfidenceBar>().DecreaseConfidence(confidenceDecrease);
             }
             focusedLetterIndex = 0;
             UpdateTypedWordText();
