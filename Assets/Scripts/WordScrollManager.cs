@@ -34,6 +34,7 @@ public class WordScrollManager : Singleton<WordScrollManager> {
 		String allTheText = speech.text;
 
 		foreach (String line in allTheText.Split("\n"[0])) {
+			
 			foreach (String word in line.Split(" "[0])) {
 				wordsList.Add (word);
 			}
