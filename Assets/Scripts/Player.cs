@@ -2,18 +2,43 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
 
+
+public class Player : MonoBehaviour {
+	public float moveSpeed;
 	// Use this for initialization
 	void Start () {
 		
 	}
+
+
+
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		if (Input.GetMouseButton (0)) {
+			HandlePlayerTranslation ();
+		} else {
+			HandlePlayerArmControl ();
+		}
+	}
 
-		//determine if we want left arm or right arm
+	void HandlePlayerTranslation()
+	{
+		//mouse is down, move the dude!
+
+		Rigidbody2D torso = transform.Find("torso").GetComponent<Rigidbody2D>();
+
+		Vector3 mousePosition = Input.mousePosition;
+		mousePosition = Camera.main.ScreenToWorldPoint (mousePosition);
+		torso.position = Vector2.Lerp (transform.position, mousePosition, moveSpeed * Time.deltaTime);
+
+
+	}
+
+	void HandlePlayerArmControl()
+	{
 
 		Transform torso = transform.Find ("torso");
 
@@ -49,6 +74,5 @@ public class Player : MonoBehaviour {
 		//Quaternion fQuat = Quaternion.identity;
 		//fQuat.eulerAngles = new Vector3 (0, 0, 0);
 		foreArm.rotation = angle;
-
 	}
 }
