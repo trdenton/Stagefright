@@ -15,7 +15,10 @@ public class WordScrollManager : Singleton<WordScrollManager> {
 
     List<Text> wordObjects = new List<Text>();
 
-    List<string> wordsList = new List<string>() { "Cars", "Dance", "Blocking", "Intense", "Doorway", "Shady", "Word" };
+	List<string> wordsList = new List<string> ();
+	private int wordIndex=0;
+
+	public TextAsset speech;
 
     public Text focusedWord = null;
     public Text typedWordTextMesh;
@@ -25,6 +28,18 @@ public class WordScrollManager : Singleton<WordScrollManager> {
         spawnNewWordTimer = WORD_INTERVAL;
 
         typedWordTextMesh.text = "";
+
+		//populate wordsList with strings from speech
+
+		String allTheText = speech.text;
+
+		foreach (String line in allTheText.Split("\n"[0])) {
+			foreach (String word in line.Split(" "[0])) {
+				wordsList.Add (word);
+			}
+		}
+
+
         //SpawnNewWord();
     }
 	
@@ -116,6 +131,7 @@ public class WordScrollManager : Singleton<WordScrollManager> {
         newText.transform.SetLocalPositionX(START_X);
         wordObjects.Add(newText);
 
-        newText.text = wordsList[Helpers.RandomIntFromRange(0, wordsList.Count)];
+        newText.text = wordsList[wordIndex];
+		wordIndex++;
     }
 }
